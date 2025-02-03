@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <title>User Management</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>User Management</h1>
+
+    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+        <div>
+            <label>First Name</label>
+            <input type="text" name="firstName" id="firstName" required>
+        </div>
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="lastName" id="lastName" required>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" name="email" id="email" required>
+        </div>
+        <div>
+            <label>Phone</label>
+            <input type="number" name="phone" id="phone" required>
+        </div>
+        <div class="form-action-buttons">
+            <input type="submit" value="Submit" value="Update">
+        </div>
+    </form>
+
+    <div class="table-header">
+        <button id="deleteSelected" onclick="deleteSelected()">Delete Selected (0)</button>
+        <button id="deleteAll" onclick="deleteAll()" style="display: none;">Delete All</button>
+    </div>
+
+    <div class="table-filter">
+        <input type="text" id="filterFirstName" placeholder="Filter By First Name" onkeyup="filterTable()">
+        <input type="text" id="filterLastName" placeholder="Filter By Last Name" onkeyup="filterTable()">
+        <input type="text" id="filterEmail" placeholder="Filter By Email" onkeyup="filterTable()">
+        <input type="number" id="filterPhone" placeholder="Filter By Phone" onkeyup="filterTable()">
+    </div>
+
+    <table class="list" id="userList">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date Created</th>
+                <th>Date Modified</th>
+                <th>Action</th>
+                <th><input type="checkbox" id="selectAll" onclick="toggleSelectAll()"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
