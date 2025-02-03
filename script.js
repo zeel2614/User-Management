@@ -179,18 +179,6 @@ function isSessionExpired() {
   return timeDifference > SESSION_TIMEOUT;
 }
 
-/*function sessionExpiredAction() {
-    alert("Session has expired. Please reload the page.");
-    sessionStorage.clear(); 
-}*/
-
-/*function onSessionTimeout() {
-    if (isSessionExpired()) {
-        sessionExpiredAction();
-        alert("Session has expired. Please reload the page.");
-    }
-}*/
-
 function toggleSelectAll() {
   let checkboxes = document.querySelectorAll(".rowCheckbox");
   let selectAll = document.getElementById("selectAll").checked;
