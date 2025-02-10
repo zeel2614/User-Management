@@ -239,6 +239,7 @@ function deleteAll() {
   tableBody.innerHTML = "";
 
   saveUsers();
+  
   updateDeleteButton();
 }
 
